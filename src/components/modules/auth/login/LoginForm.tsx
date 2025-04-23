@@ -1,5 +1,5 @@
 "use client";
-import ReCAPTCHA from "react-google-recaptcha";
+
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -14,10 +14,10 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Link from "next/link";
 import Logo from "@/assets/svgs/Logo";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { loginUser, reCaptchaTokenVerification } from "@/services/AuthService";
+import { loginUser } from "@/services/AuthService";
 import { toast } from "sonner";
 import { loginSchema } from "./loginValidation";
-import { useState } from "react";
+
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function LoginForm() {

@@ -142,7 +142,7 @@ export default function AddProductsForm() {
     }
     try {
       const res = await addProduct(formData);
-
+      console.log("res: ", res);
       if (res.success) {
         toast.success(res.message);
         router.push("/user/shop/products");
