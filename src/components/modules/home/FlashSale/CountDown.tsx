@@ -1,12 +1,16 @@
 "use client";
 import React from "react";
-import Countdown from "react-countdown";
+import Countdown, { CountdownRenderProps } from "react-countdown";
 
-// টাইমার শেষ হলে
 const Completionist = () => <span>⏰ ৪ দিন শেষ!</span>;
 
-// কাস্টম renderer
-const renderer = ({ days, hours, minutes, seconds, completed }) => {
+const renderer = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  completed,
+}: CountdownRenderProps) => {
   if (completed) {
     return <Completionist />;
   } else {
@@ -20,8 +24,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 };
 
 const CountdownTimer = () => {
-  const endTime = Date.now() + 4 * 24 * 60 * 60 * 1000; // ৪ দিনের জন্য
-
+  const endTime = Date.now() + 4 * 24 * 60 * 60 * 1000;
   return (
     <div>
       <h2 className="mb-2 text-2xl font-semibold">🔥 Flash Sale শেষ হতে:</h2>
