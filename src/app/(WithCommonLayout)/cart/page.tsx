@@ -1,5 +1,6 @@
 import CartProducts from "@/components/modules/cart/cartProducts";
 import Coupon from "@/components/modules/cart/cupon";
+import PaymentDetails from "@/components/modules/cart/PaymentDetails";
 import ProductBanner from "@/components/modules/products/banner";
 
 const CartPage = () => {
@@ -9,6 +10,7 @@ const CartPage = () => {
       <div className="grid grid-cols-12 gap-8 mt-10">
         <CartProducts />
         <Coupon />
+        <PaymentDetails />
       </div>
     </div>
   );
